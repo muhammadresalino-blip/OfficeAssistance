@@ -1,0 +1,42 @@
+[
+  {
+    "id": "excel-tip-freeze",
+    "app": "excel",
+    "type": "tips",
+    "title": "Bekukan baris atau kolom",
+    "syntax": "Tampilan > Bekukan Panel",
+    "description": "Tetapkan kolom atau baris agar tetap terlihat saat meng-scroll data panjang.",
+    "example": "Bekukan baris header agar tidak hilang saat scroll",
+    "keywords": ["bekukan", "freeze", "scroll", "header"]
+  },
+  {
+    "id": "excel-tip-filter",
+    "app": "excel",
+    "type": "tips",
+    "title": "Aktifkan filter otomatis",
+    "syntax": "Data > Filter",
+    "description": "Tambahkan tombol filter pada setiap header kolom untuk menyaring data dengan cepat.",
+    "example": "Tampilkan hanya data Jakarta dengan filter",
+    "keywords": ["filter", "saring", "data", "otomatis"]
+  },
+  {
+    "id": "word-tip-style",
+    "app": "word",
+    "type": "tips",
+    "title": "Gunakan gaya judul",
+    "syntax": "Beranda > Gaya > Judul 1",
+    "description": "Gunakan gaya bawaan untuk judul agar bisa membuat daftar isi otomatis.",
+    "example": "Beranda → Gaya → Judul 1 untuk setiap bab",
+    "keywords": ["gaya", "daftar isi", "judul", "word"]
+  },
+  {
+    "id": "powerpoint-tip-master",
+    "app": "powerpoint",
+    "type": "tips",
+    "title": "Edit Slide Master",
+    "syntax": "Tampilan > Slide Master",
+    "description": "Ubah tampilan seluruh slide sekaligus melalui Slide Master.",
+    "example": "Ubah warna dan font semua slide sekaligus",
+    "keywords": ["slide master", "tampilan", "presentasi", "tema"]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "excel-shortcut-save",
+    "app": "excel",
+    "type": "shortcut",
+    "title": "Simpan file",
+    "syntax": "Ctrl + S",
+    "description": "Menyimpan workbook yang sedang dibuka.",
+    "example": "Tekan Ctrl + S setelah mengedit data",
+    "keywords": ["simpan", "save", "ctrl s", "file"]
+  },
+  {
+    "id": "excel-shortcut-copy",
+    "app": "excel",
+    "type": "shortcut",
+    "title": "Salin sel",
+    "syntax": "Ctrl + C",
+    "description": "Menyalin sel atau rentang yang dipilih ke clipboard.",
+    "example": "Blokir data, lalu tekan Ctrl + C",
+    "keywords": ["salin", "copy", "ctrl c", "clipboard"]
+  },
+  {
+    "id": "excel-shortcut-paste",
+    "app": "excel",
+    "type": "shortcut",
+    "title": "Tempel sel",
+    "syntax": "Ctrl + V",
+    "description": "Menempelkan isi clipboard ke sel yang dipilih.",
+    "example": "Tekan Ctrl + V untuk menempelkan data yang disalin",
+    "keywords": ["tempel", "paste", "ctrl v", "clipboard"]
+  },
+  {
+    "id": "excel-shortcut-undo",
+    "app": "excel",
+    "type": "shortcut",
+    "title": "Batalkan langkah",
+    "syntax": "Ctrl + Z",
+    "description": "Membatalkan perintah terakhir yang dilakukan.",
+    "example": "Tekan Ctrl + Z untuk mengembalikan perubahan terakhir",
+    "keywords": ["batal", "undo", "ctrl z", "kembalikan"]
+  },
+  {
+    "id": "excel-shortcut-fill",
+    "app": "excel",
+    "type": "shortcut",
+    "title": "Isi bawah (Fill Down)",
+    "syntax": "Ctrl + D",
+    "description": "Menyalin isi sel teratas ke sel di bawahnya dalam rentang yang sama.",
+    "example": "Blokir sel atas dan bawah, tekan Ctrl + D",
+    "keywords": ["isi bawah", "fill down", "ctrl d", "salin bawah"]
+  },
+  {
+    "id": "excel-shortcut-autosum",
+    "app": "excel",
+    "type": "shortcut",
+    "title": "Jumlah otomatis (AutoSum)",
+    "syntax": "Alt + =",
+    "description": "Masukkan rumus SUM otomatis untuk rentang di atas atau di samping sel aktif.",
+    "example": "Klik sel bawah kolom angka, tekan Alt + =",
+    "keywords": ["jumlah otomatis", "autosum", "alt sama dengan", "sum"]
+  },
+  {
+    "id": "excel-shortcut-newline",
+    "app": "excel",
+    "type": "shortcut",
+    "title": "Baris baru dalam sel",
+    "syntax": "Alt + Enter",
+    "description": "Membuat baris baru dalam sel yang sama saat mengetik teks.",
+    "example": "Tekan Alt + Enter saat mengetik catatan panjang",
+    "keywords": ["baris baru", "enter dalam sel", "alt enter", "teks multibaris"]
+  },
+  {
+    "id": "word-shortcut-save",
+    "app": "word",
+    "type": "shortcut",
+    "title": "Simpan dokumen",
+    "syntax": "Ctrl + S",
+    "description": "Menyimpan dokumen Word yang sedang dibuka.",
+    "example": "Tekan Ctrl + S setelah mengetik surat",
+    "keywords": ["simpan", "save", "ctrl s", "dokumen"]
+  },
+  {
+    "id": "word-shortcut-bold",
+    "app": "word",
+    "type": "shortcut",
+    "title": "Tebal (Bold)",
+    "syntax": "Ctrl + B",
+    "description": "Mengubah teks yang dipilih menjadi huruf tebal.",
+    "example": "Blokir judul, tekan Ctrl + B",
+    "keywords": ["tebal", "bold", "ctrl b", "format huruf"]
+  },
+  {
+    "id": "word-shortcut-find",
+    "app": "word",
+    "type": "shortcut",
+    "title": "Cari teks",
+    "syntax": "Ctrl + F",
+    "description": "Membuka kotak pencarian untuk mencari kata atau frase dalam dokumen.",
+    "example": "Tekan Ctrl + F lalu ketik kata yang dicari",
+    "keywords": ["cari", "find", "ctrl f", "pencarian"]
+  },
+  {
+    "id": "powerpoint-shortcut-new-slide",
+    "app": "powerpoint",
+    "type": "shortcut",
+    "title": "Slide baru",
+    "syntax": "Ctrl + M",
+    "description": "Menambahkan slide baru ke presentasi.",
+    "example": "Tekan Ctrl + M untuk menambah slide",
+    "keywords": ["slide baru", "ctrl m", "presentasi", "tambah slide"]
+  },
+  {
+    "id": "powerpoint-shortcut-start",
+    "app": "powerpoint",
+    "type": "shortcut",
+    "title": "Mulai presentasi",
+    "syntax": "F5",
+    "description": "Memulai presentasi slide dari slide pertama.",
+    "example": "Tekan F5 untuk memulai tayangan",
+    "keywords": ["mulai", "tayangan", "f5", "presentasi"]
+  }
+]

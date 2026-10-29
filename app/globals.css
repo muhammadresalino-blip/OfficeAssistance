@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-text;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-button px-4 py-2 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none min-h-touch;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primaryHover;
+  }
+  .btn-outline {
+    @apply btn border border-border bg-card hover:bg-gray-100 text-text;
+  }
+  .btn-text {
+    @apply btn bg-transparent text-text hover:bg-gray-100 text-sm;
+  }
+  .card {
+    @apply rounded-card border border-border bg-card p-4 shadow-sm;
+  }
+  .input {
+    @apply w-full rounded-input border border-inputBorder bg-card px-3 py-2 text-text focus:outline-none focus:ring-2 focus:ring-primary transition-colors;
+  }
+  .label {
+    @apply block text-sm font-medium text-textSecondary mb-1;
+  }
+  .mono {
+    @apply font-mono text-sm text-text bg-gray-100 rounded-button px-2 py-1.5 border border-border;
+  }
+  .touch-target {
+    @apply min-h-touch min-w-touch;
+  }
+}

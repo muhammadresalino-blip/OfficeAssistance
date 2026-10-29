@@ -1,0 +1,112 @@
+[
+  {
+    "id": "excel-sum",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Jumlahkan sel (SUM)",
+    "syntax": "=SUM(A1:A10)",
+    "description": "Menjumlahkan semua angka dalam satu rentang sel.",
+    "example": "Jumlahkan A1 sampai A10",
+    "keywords": ["jumlah", "total", "penjumlahan", "sum", "rangkaian"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-sumifs",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Jumlahkan dengan kriteria (SUMIFS)",
+    "syntax": "=SUMIFS(sum_range;criteria_range1;criteria1;[criteria_range2;criteria2];...)",
+    "description": "Menjumlahkan sel yang memenuhi satu atau lebih kriteria.",
+    "example": "Jumlahkan penjualan Jakarta bulan Januari",
+    "keywords": ["jumlah jika", "kriteria", "sumifs", "berdasarkan", "filter jumlah"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-vlookup",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Cari data vertikal (VLOOKUP)",
+    "syntax": "=VLOOKUP(lookup_value;table_array;col_index_num;[range_lookup])",
+    "description": "Mencari nilai dalam kolom pertama tabel dan mengembalikan nilai dari kolom lain pada baris yang sama.",
+    "example": "Cari harga barang berdasarkan kode barang",
+    "keywords": ["cari vertikal", "vlookup", "referensi", "tabel", "pencarian"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-xlookup",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Cari data modern (XLOOKUP)",
+    "syntax": "=XLOOKUP(lookup_value;lookup_array;return_array;[if_not_found];[match_mode];[search_mode])",
+    "description": "Mencari nilai dalam rentang dan mengembalikan hasil dari rentang lain, lebih fleksibel dari VLOOKUP.",
+    "example": "Cari nama pelanggan berdasarkan ID",
+    "keywords": ["xlookup", "cari modern", "referensi", "pencarian"],
+    "minVersion": "Excel 2021 / Microsoft 365"
+  },
+  {
+    "id": "excel-if",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Logika IF (Jika)",
+    "syntax": "=IF(logical_test;value_if_true;[value_if_false])",
+    "description": "Mengembalikan satu nilai jika kondisi benar, dan nilai lain jika kondisi salah.",
+    "example": "Tampilkan 'Lulus' jika nilai di atas 70, jika tidak 'Tidak Lulus'",
+    "keywords": ["jika", "if", "logika", "kondisi", "bernilai"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-countif",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Hitung sel dengan kriteria (COUNTIF)",
+    "syntax": "=COUNTIF(range;criteria)",
+    "description": "Menghitung jumlah sel dalam rentang yang memenuhi satu kriteria.",
+    "example": "Hitung berapa kali 'Selesai' muncul dalam status",
+    "keywords": ["hitung", "countif", "kriteria", "frekuensi"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-average",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Rata-rata (AVERAGE)",
+    "syntax": "=AVERAGE(number1;[number2];...)",
+    "description": "Menghitung rata-rata (aritmatika) dari angka yang diberikan.",
+    "example": "Rata-rata nilai ujian siswa",
+    "keywords": ["rata-rata", "average", "mean", "aritmatika"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-concatenate",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Gabungkan teks (CONCATENATE)",
+    "syntax": "=CONCATENATE(text1;[text2];...)",
+    "description": "Menggabungkan dua atau lebih teks menjadi satu string.",
+    "example": "Gabungkan nama depan dan nama belakang",
+    "keywords": ["gabungkan", "concatenate", "teks", "string", "gabung"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-today",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Tanggal hari ini (TODAY)",
+    "syntax": "=TODAY()",
+    "description": "Mengembalikan tanggal sistem saat ini.",
+    "example": "Tampilkan tanggal hari ini dalam sel",
+    "keywords": ["hari ini", "today", "tanggal", "otomatis"],
+    "minVersion": "Excel 2007"
+  },
+  {
+    "id": "excel-trim",
+    "app": "excel",
+    "type": "rumus",
+    "title": "Hapus spasi berlebih (TRIM)",
+    "syntax": "=TRIM(text)",
+    "description": "Menghapus semua spasi dari teks kecuali spasi tunggal antar kata.",
+    "example": "Bersihkan '  Budi   Santoso  ' menjadi 'Budi Santoso'",
+    "keywords": ["bersihkan", "spasi", "trim", "teks", "rapikan"],
+    "minVersion": "Excel 2007"
+  }
+]
