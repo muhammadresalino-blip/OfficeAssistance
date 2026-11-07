@@ -1,11 +1,12 @@
-# Office Assistant — MVP (Kamus + Asisten Rumus)
+# Office Assistant — Kamus, Asisten Rumus, Pembersih Data
 
 Aplikasi web produktivitas kerja (non-komersial) untuk Excel, Word, dan PowerPoint. Bahasa: Indonesia. Dibangun berdasarkan dokumen BRD/PRD/Arsitektur/API/Deployment.
 
-## Fitur MVP
-- **Beranda** — pilihan fitur utama + pencarian global.
+## Fitur tersedia
+- **Beranda** — pilihan fitur utama.
 - **Asisten Rumus (P1)** — input kebutuhan dalam bahasa Indonesia → rumus siap salin + penjelasan + contoh + catatan versi Excel.
 - **Kamus Rumus & Shortcut (P2)** — pencarian instan, filter aplikasi dan jenis, offline setelah pemuatan pertama.
+- **Pembersih Data (P3)** — tempel data Excel/CSV (maks. 2.000 baris), deteksi duplikat, spasi berlebih, kolom gabungan, tanggal campur, dan jumlah kolom tidak rata. Perbaikan berjalan di browser, pratinjau + unduh CSV. Saran AI opsional hanya mengirim 20 baris contoh.
 
 ## Teknologi
 - Next.js 14 (App Router), TypeScript, Tailwind CSS
@@ -16,7 +17,6 @@ Aplikasi web produktivitas kerja (non-komersial) untuk Excel, Word, dan PowerPoi
 ## Menjalankan secara lokal
 
 ```bash
-cd office-assistant
 cp .env.example .env   # isi ANTHROPIC_API_KEY dan Upstash jika ingin pakai AI asli
 npm install
 npm run dev

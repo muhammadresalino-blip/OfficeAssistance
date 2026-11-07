@@ -37,7 +37,7 @@ export default function HomePage() {
 
       <section className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
-          { label: 'Pembersih Data', to: '#', status: 'Rilis 2' },
+          { label: 'Pembersih Data', to: '/bersihkan', status: 'Tersedia' },
           { label: 'Kerangka Dokumen', to: '#', status: 'Rilis 3' },
           { label: 'Outline Presentasi', to: '#', status: 'Rilis 3' },
           { label: 'Template Gratis', to: '#', status: 'Rilis 4' },

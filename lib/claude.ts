@@ -12,10 +12,11 @@ const client = hasApiKey ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY
 export async function askJson(
   system: string,
   user: string,
-  model = 'claude-haiku-3-5-20241022'
+  model = 'claude-haiku-3-5-20241022',
+  fallback: (user: string) => Record<string, unknown> = fallbackFromUser
 ): Promise<Record<string, unknown>> {
   if (!client) {
-    return fallbackFromUser(user);
+    return fallback(user);
   }
 
   const msg = await client.messages.create({

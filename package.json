@@ -2,7 +2,7 @@
   "name": "office-assistant",
   "version": "1.0.0",
   "private": true,
-  "description": "Asisten Office web (Excel, Word, PowerPoint) berbahasa Indonesia — MVP Kamus + Asisten Rumus",
+  "description": "Asisten Office web (Excel, Word, PowerPoint) berbahasa Indonesia — Kamus, Asisten Rumus, Pembersih Data",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

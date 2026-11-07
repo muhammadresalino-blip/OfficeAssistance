@@ -50,10 +50,10 @@ describe('Evaluasi prompt rumus (30 kasus)', () => {
       if (parsed.success) {
         expect(parsed.data.formula.startsWith('=')).toBe(true);
         if (hasAI && c.expectContains) {
-          expect(parsed.data.formula.toUpperCase()).toContain(
-            c.expectContains,
+          expect(
+            parsed.data.formula.toUpperCase().includes(c.expectContains),
             `Rumus untuk "${c.q}" seharusnya mengandung ${c.expectContains}`
-          );
+          ).toBe(true);
         }
       }
     }

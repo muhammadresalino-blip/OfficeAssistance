@@ -33,3 +33,30 @@ export const FeedbackReq = z.object({
 });
 
 export type FeedbackRequest = z.infer<typeof FeedbackReq>;
+
+export const CleanIssue = z.enum([
+  'duplicate',
+  'extra_space',
+  'merged_column',
+  'mixed_date',
+  'uneven_columns',
+]);
+
+export const CleanSuggestReq = z.object({
+  sample: z.array(z.array(z.string().max(300)).max(60)).min(1).max(20),
+  issues: z.array(CleanIssue).min(1).max(5),
+});
+
+export const CleanFormula = z.object({
+  purpose: z.string().min(1),
+  formula: z.string().min(1),
+});
+
+export const CleanSuggestRes = z.object({
+  steps: z.array(z.string().min(1)).min(1).max(10),
+  formulas: z.array(CleanFormula).max(10).default([]),
+});
+
+export type CleanIssueCode = z.infer<typeof CleanIssue>;
+export type CleanSuggestRequest = z.infer<typeof CleanSuggestReq>;
+export type CleanSuggestResponse = z.infer<typeof CleanSuggestRes>;
