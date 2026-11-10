@@ -7,6 +7,12 @@ Aplikasi web produktivitas kerja (non-komersial) untuk Excel, Word, dan PowerPoi
 - **Asisten Rumus (P1)** — input kebutuhan dalam bahasa Indonesia → rumus siap salin + penjelasan + contoh + catatan versi Excel.
 - **Kamus Rumus & Shortcut (P2)** — pencarian instan, filter aplikasi dan jenis, offline setelah pemuatan pertama.
 - **Pembersih Data (P3)** — tempel data Excel/CSV (maks. 2.000 baris), deteksi duplikat, spasi berlebih, kolom gabungan, tanggal campur, dan jumlah kolom tidak rata. Perbaikan berjalan di browser, pratinjau + unduh CSV. Saran AI opsional hanya mengirim 20 baris contoh.
+- **Kerangka Dokumen (P4)** — surat resmi, laporan, notulen, proposal; unduh .docx.
+- **Outline Presentasi (P5)** — topik + audiens + jumlah slide (5–20) → daftar slide dengan poin dan saran visual; unduh .pptx.
+
+## Tambahan
+- **PWA**: `manifest` + service worker → bisa dipasang di HP dan jalan offline setelah kunjungan pertama.
+- Mode fallback lokal: tanpa `ANTHROPIC_API_KEY`, semua fitur AI tetap menjawab dari aturan lokal.
 
 ## Teknologi
 - Next.js 14 (App Router), TypeScript, Tailwind CSS
@@ -23,7 +29,7 @@ npm run dev
 # Buka http://localhost:3000
 ```
 
-Tanpa `ANTHROPIC_API_KEY` aplikasi tetap berjalan dalam **mode fallback** (rumus dan kamus dari data lokal, tanpa panggilan AI).
+Tanpa `ANTHROPIC_API_KEY` aplikasi tetap berjalan dalam **mode fallback lokal** (rumus, kamus, pembersihan data, kerangka dokumen, dan outline slide dari aturan lokal, tanpa panggilan AI).
 
 ## Tes
 

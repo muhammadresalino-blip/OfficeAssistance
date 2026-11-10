@@ -34,6 +34,10 @@ export const FeedbackReq = z.object({
 
 export type FeedbackRequest = z.infer<typeof FeedbackReq>;
 
+/* -------------------------------------------------------------------------- */
+/* P3: Clean                                                                  */
+/* -------------------------------------------------------------------------- */
+
 export const CleanIssue = z.enum([
   'duplicate',
   'extra_space',
@@ -60,3 +64,55 @@ export const CleanSuggestRes = z.object({
 export type CleanIssueCode = z.infer<typeof CleanIssue>;
 export type CleanSuggestRequest = z.infer<typeof CleanSuggestReq>;
 export type CleanSuggestResponse = z.infer<typeof CleanSuggestRes>;
+
+/* -------------------------------------------------------------------------- */
+/* P4: Document Outline                                                       */
+/* -------------------------------------------------------------------------- */
+
+export const DocType = z.enum(['surat_resmi', 'laporan', 'notulen', 'proposal']);
+
+export const DocOutlineReq = z.object({
+  type: DocType,
+  title: z.string().min(5).max(200),
+  purpose: z.string().min(5).max(500),
+  organization: z.string().max(100).optional(),
+});
+
+export const DocSection = z.object({
+  heading: z.string().min(1),
+  content: z.string().min(1),
+});
+
+export const DocOutlineRes = z.object({
+  sections: z.array(DocSection).min(2),
+  tips: z.array(z.string()).optional(),
+});
+
+export type DocumentType = z.infer<typeof DocType>;
+export type DocOutlineRequest = z.infer<typeof DocOutlineReq>;
+export type DocOutlineResponse = z.infer<typeof DocOutlineRes>;
+
+/* -------------------------------------------------------------------------- */
+/* P5: Slide Outline                                                          */
+/* -------------------------------------------------------------------------- */
+
+export const SlideOutlineReq = z.object({
+  topic: z.string().min(5).max(200),
+  audience: z.string().min(3).max(100),
+  slides: z.coerce.number().min(5).max(20).default(10),
+});
+
+export const SlideEntry = z.object({
+  no: z.number(),
+  title: z.string().min(1),
+  bullets: z.array(z.string()).min(1),
+  visual: z.string().optional(),
+});
+
+export const SlideOutlineRes = z.object({
+  slides: z.array(SlideEntry).min(5),
+});
+
+export type SlideOutlineRequest = z.infer<typeof SlideOutlineReq>;
+export type SlideOutlineResponse = z.infer<typeof SlideOutlineRes>;
+
