@@ -1,0 +1,62 @@
+[
+  {
+    "id": "invoice",
+    "name": "Invoice Penjualan",
+    "category": "invoice",
+    "format": "xlsx",
+    "file": "invoice.xlsx",
+    "description": "Faktur penjualan dengan kolom Qty, harga satuan, total otomatis (formula), PPN 11%, dan grand total.",
+    "previewUrl": "/templates/invoice.xlsx",
+    "downloadUrl": "/api/templates/invoice/download"
+  },
+  {
+    "id": "absensi",
+    "name": "Absensi Karyawan",
+    "category": "absensi",
+    "format": "xlsx",
+    "file": "absensi.xlsx",
+    "description": "Rekap kehadiran bulanan: nama, tanggal, jam masuk/pulang, keterangan, dan status (Hadir/Izin/Sakit).",
+    "previewUrl": "/templates/absensi.xlsx",
+    "downloadUrl": "/api/templates/absensi/download"
+  },
+  {
+    "id": "anggaran",
+    "name": "Rencana Anggaran",
+    "category": "anggaran",
+    "format": "xlsx",
+    "file": "anggaran.xlsx",
+    "description": "Perbandingan rencana vs realisasi per kategori dengan selisih dan total otomatis.",
+    "previewUrl": "/templates/anggaran.xlsx",
+    "downloadUrl": "/api/templates/anggaran/download"
+  },
+  {
+    "id": "jadwal",
+    "name": "Jadwal Mingguan",
+    "category": "jadwal",
+    "format": "xlsx",
+    "file": "jadwal.xlsx",
+    "description": "Jadwal kegiatan Senin–Jumat per slot jam, siap diisi untuk kelas, rapat, atau shift kerja.",
+    "previewUrl": "/templates/jadwal.xlsx",
+    "downloadUrl": "/api/templates/jadwal/download"
+  },
+  {
+    "id": "cv",
+    "name": "CV / Daftar Riwayat Hidup",
+    "category": "cv",
+    "format": "docx",
+    "file": "cv.docx",
+    "description": "Daftar riwayat hidup satu halaman: pendidikan, pengalaman kerja, keahlian, dan referensi.",
+    "previewUrl": "/templates/cv.docx",
+    "downloadUrl": "/api/templates/cv/download"
+  },
+  {
+    "id": "slide-dasar",
+    "name": "Slide Presentasi Dasar",
+    "category": "slide",
+    "format": "pptx",
+    "file": "slide-dasar.pptx",
+    "description": "Deck 7 slide: judul, agenda, latar belakang, pembahasan, data, kesimpulan, dan penutup.",
+    "previewUrl": "/templates/slide-dasar.pptx",
+    "downloadUrl": "/api/templates/slide-dasar/download"
+  }
+]

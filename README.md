@@ -9,6 +9,7 @@ Aplikasi web produktivitas kerja (non-komersial) untuk Excel, Word, dan PowerPoi
 - **Pembersih Data (P3)** — tempel data Excel/CSV (maks. 2.000 baris), deteksi duplikat, spasi berlebih, kolom gabungan, tanggal campur, dan jumlah kolom tidak rata. Perbaikan berjalan di browser, pratinjau + unduh CSV. Saran AI opsional hanya mengirim 20 baris contoh.
 - **Kerangka Dokumen (P4)** — surat resmi, laporan, notulen, proposal; unduh .docx.
 - **Outline Presentasi (P5)** — topik + audiens + jumlah slide (5–20) → daftar slide dengan poin dan saran visual; unduh .pptx.
+- **Template Gratis (P6)** — katalog 6 template (invoice, absensi, anggaran, jadwal, CV, slide dasar) dengan pratinjau, deskripsi, dan unduhan langsung .xlsx/.docx/.pptx.
 
 ## Tambahan
 - **PWA**: `manifest` + service worker → bisa dipasang di HP dan jalan offline setelah kunjungan pertama.
@@ -35,6 +36,17 @@ Tanpa `ANTHROPIC_API_KEY` aplikasi tetap berjalan dalam **mode fallback lokal** 
 
 ```bash
 npm test
+npm run lint
+```
+
+CI GitHub Actions (`.github/workflows/ci.yml`) menjalankan lint, test, dan build di setiap push ke `main`.
+
+## Template
+
+File template dibuat oleh `scripts/generate-templates.mjs` (SheetJS + docx + pptxgenjs). Regenerasi:
+
+```bash
+npm run templates
 ```
 
 ## Deploy (Vercel)

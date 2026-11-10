@@ -121,7 +121,7 @@ export default function KamusPage() {
           <div className="space-y-2">
             {results.length === 0 ? (
               <div className="card p-6 text-center text-textSecondary">
-                Tidak ditemukan. Coba kata kunci lain seperti "jumlah", "vlookup", atau "simpan".
+                Tidak ditemukan. Coba kata kunci lain seperti &quot;jumlah&quot;, &quot;vlookup&quot;, atau &quot;simpan&quot;.
               </div>
             ) : (
               results.map((entry) => (

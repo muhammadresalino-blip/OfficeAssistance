@@ -3,6 +3,7 @@ import {
   FormulaReq,
   FormulaRes,
   DictionaryQuery,
+  FeedbackReq,
   CleanSuggestReq,
   CleanSuggestRes,
   DocOutlineReq,
@@ -94,6 +95,18 @@ describe('CleanSuggestRes', () => {
   it('menolak steps kosong', () => {
     const parsed = CleanSuggestRes.safeParse({ steps: [], formulas: [] });
     expect(parsed.success).toBe(false);
+  });
+});
+
+describe('FeedbackReq', () => {
+  it('menerima nilai up/down', () => {
+    expect(FeedbackReq.safeParse({ feature: 'formula', rating: 'up' }).success).toBe(true);
+    expect(FeedbackReq.safeParse({ feature: 'cleaner', rating: 'down' }).success).toBe(true);
+  });
+
+  it('menolak fitur dan nilai yang tidak dikenal', () => {
+    expect(FeedbackReq.safeParse({ feature: 'lainnya', rating: 'up' }).success).toBe(false);
+    expect(FeedbackReq.safeParse({ feature: 'formula', rating: 'meh' }).success).toBe(false);
   });
 });
 

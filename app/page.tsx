@@ -70,7 +70,7 @@ export default function HomePage() {
 
       <section className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
-          { label: 'Template Gratis', to: '#', status: 'Rilis 4' },
+          { label: 'Template Gratis', to: '/template', status: 'Tersedia' },
           { label: 'Mode Gelap', to: '#', status: 'Segera' },
           { label: 'Add-in Excel', to: '#', status: 'Rencana' },
           { label: 'Dukungan PDF', to: '#', status: 'Rencana' },

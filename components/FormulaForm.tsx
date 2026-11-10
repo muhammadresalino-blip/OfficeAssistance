@@ -18,6 +18,22 @@ export default function FormulaForm() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [rateLimited, setRateLimited] = useState(false);
+  const [feedback, setFeedback] = useState<'up' | 'down' | null>(null);
+
+  const sendFeedback = useCallback(async (rating: 'up' | 'down') => {
+    if (feedback) return;
+    setFeedback(rating);
+    try {
+      const res = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ feature: 'formula', rating }),
+      });
+      if (!res.ok) setFeedback(null);
+    } catch {
+      setFeedback(null);
+    }
+  }, [feedback]);
 
   const validate = useCallback((): string | null => {
     const trimmed = request.trim();
@@ -31,6 +47,7 @@ export default function FormulaForm() {
     setError(null);
     setResult(null);
     setRateLimited(false);
+    setFeedback(null);
 
     const validationError = validate();
     if (validationError) {
@@ -192,8 +209,22 @@ export default function FormulaForm() {
               Catatan: hasil dihasilkan AI, periksa kembali sebelum digunakan.
             </p>
             <div className="mt-4 flex gap-2">
-              <button className="flex-1 btn-outline text-sm touch-target">Berguna 👍</button>
-              <button className="flex-1 btn-outline text-sm touch-target">Kurang tepat 👎</button>
+              <button
+                type="button"
+                onClick={() => sendFeedback('up')}
+                disabled={feedback !== null}
+                className="flex-1 btn-outline text-sm touch-target"
+              >
+                {feedback === 'up' ? 'Terima kasih 👍' : 'Berguna 👍'}
+              </button>
+              <button
+                type="button"
+                onClick={() => sendFeedback('down')}
+                disabled={feedback !== null}
+                className="flex-1 btn-outline text-sm touch-target"
+              >
+                {feedback === 'down' ? 'Masukan dicatat 👎' : 'Kurang tepat 👎'}
+              </button>
             </div>
           </article>
         ) : (
